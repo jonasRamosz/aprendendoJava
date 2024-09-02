@@ -1,0 +1,22 @@
+package services;
+
+import java.security.InvalidParameterException;
+
+public class BrazilInterestService {
+	private double interestRate;
+
+	public BrazilInterestService(double interestRate) {
+		this.interestRate = interestRate;
+	}
+	
+	public double getInterestRate() {
+		return interestRate;
+	}
+	
+	public double payment(double amount, int mounths) {
+		if(mounths< 1) {
+			throw new InvalidParameterException("Mounths must be greater than zero")
+		}
+	}
+
+}
